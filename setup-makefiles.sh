@@ -44,10 +44,8 @@ write_headers
 
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt
-
-cat << EOF >> "$ANDROIDMK"
-
-EOF
+echo "" >> "$PRODUCTMK"
+write_makefiles "$MY_DIR"/proprietary-files-qc.txt
 
 # We are done!
 write_footers
